@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="jumbotron text-center">
+    <h1>Welcome</h1>
+    <p class="lead">
+        Whether you're a passionate blogger or want to add a blog to your site, YO Blog has all you need to easily create posts.
+    </p>
+    {% if not session.logged_in %}
+    <a href="/register" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-registration-mark"> Register</span></a>
+    <a href="/login" class="btn btn-success btn-lg"><span class="glyphicon glyphicon-log-in"> Login</span></a>
+    {% endif %}
+</div>
+{% endblock %}

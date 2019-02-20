@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+	<h1 class="bg-success">{{data['title']}}</h1>
+    <small class="bg-warning">Written by {{data['user']}} on {{data['date']}} ago </small>
+	<hr />
+    <div class="bg-info">
+        {{data['content'] | safe     }}
+    </div>
+{% endblock %}
